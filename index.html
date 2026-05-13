@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Birhaa Garden | Feel in Hyderabad</title>
+  <style>
+    :root {
+      --bg: #fffaf5;
+      --surface: #ffffff;
+      --text: #2c221b;
+      --muted: #6f6258;
+      --accent: #d8731a;
+      --accent-dark: #a75210;
+      --line: #eadfd3;
+      --olive: #4f6d3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Inter, system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255, 250, 245, 0.95); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 0; }
+    .brand { font-weight: 700; color: var(--accent-dark); font-size: 1.1rem; }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero { padding: 3rem 0 2rem; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: center; }
+    .badge { display: inline-block; background: #fff1e5; color: var(--accent-dark); border: 1px solid #ffd9b7; padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.85rem; }
+    h1 { margin: 0.8rem 0; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; }
+    .sub { color: var(--muted); max-width: 52ch; }
+    .cta { display: flex; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+    .btn { padding: 0.65rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid var(--accent); }
+    .btn.primary { background: var(--accent); color: white; }
+    .btn.secondary { color: var(--accent-dark); background: #fff; }
+
+    .hero-logo {
+      width: 100%; border-radius: 14px; border: 1px solid var(--line);
+      box-shadow: 0 16px 35px rgba(44, 34, 27, 0.08);
+    }
+
+    section { padding: 2.2rem 0; }
+    h2 { font-size: 1.7rem; margin: 0 0 1rem; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.2rem; }
+
+    .menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .menu-list { list-style: none; margin: 0; padding: 0; }
+    .menu-list li { display: flex; justify-content: space-between; border-bottom: 1px dashed #eee0d0; padding: 0.45rem 0; gap: 0.6rem; }
+
+    .reviews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .star { color: #f0a500; font-size: 1.1rem; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    input, textarea {
+      width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #d9cbbb;
+      font: inherit; background: #fff;
+    }
+    textarea { min-height: 120px; }
+    footer { text-align: center; color: var(--muted); border-top: 1px solid var(--line); padding: 1rem 0 2rem; }
+
+    @media (max-width: 860px) {
+      .hero-grid, .two-col, .reviews, .menu-grid { grid-template-columns: 1fr; }
+      .nav-links { justify-content: center; }
+      nav { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">The Birhaa Garden</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#menu">Menu</a>
+          <a href="#order">Order Online</a>
+          <a href="#feedback">Feedback</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Authentic Hyderabadi Flavours</span>
+          <h1>Feel In Hyderabad at <br/>The Birhaa Garden</h1>
+          <p class="sub">A warm, minimalist dining experience inspired by Hyderabad's rich food culture. From aromatic dum biryani to classic breads, every dish is made with heart.</p>
+          <div class="cta">
+            <a class="btn primary" href="#order">Order Online</a>
+            <a class="btn secondary" href="#menu">View Menu</a>
+          </div>
+        </div>
+        <img class="hero-logo" src="assets/logo.svg" alt="The Birhaa Garden storefront logo" />
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container card">
+        <h2>About Us</h2>
+        <p>The Birhaa Garden is a local Hyderabadi restaurant in Fawkner, Victoria. We focus on traditional recipes, bold spices, and homely hospitality. Whether you dine in, take away, or order online, our aim is simple: serve soulful food that reminds you of home.</p>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="container">
+        <h2>Menu</h2>
+        <div class="menu-grid">
+          <div class="card">
+            <h3>Sides</h3>
+            <ul class="menu-list">
+              <li><span>Chicken 65</span><strong>$20.00</strong></li>
+              <li><span>Butter Chicken (Boneless)</span><strong>$20.00</strong></li>
+              <li><span>Dum Ka Chicken (With Bone)</span><strong>$18.00</strong></li>
+              <li><span>Mutton Masala (Lamb)</span><strong>$18.00</strong></li>
+              <li><span>Paneer Tikka</span><strong>$18.00</strong></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Breads</h3>
+            <ul class="menu-list">
+              <li><span>Aloo Paratha</span><strong>$8.00</strong></li>
+              <li><span>Chicken Paratha</span><strong>$10.00</strong></li>
+              <li><span>Garlic Naan</span><strong>$3.00</strong></li>
+              <li><span>Roghni Naan</span><strong>$3.00</strong></li>
+              <li><span>Tandoori Bread</span><strong>$2.00</strong></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Desserts</h3>
+            <ul class="menu-list">
+              <li><span>Fruit Salad</span><strong>$5.00</strong></li>
+              <li><span>Gajar Ka Halwa</span><strong>$6.00</strong></li>
+              <li><span>Gulab Jamun (Each)</span><strong>$2.00</strong></li>
+              <li><span>Kheer</span><strong>$5.00</strong></li>
+              <li><span>Mango Delight</span><strong>$5.00</strong></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Soft Drinks</h3>
+            <ul class="menu-list">
+              <li><span>Soft Drink Bottle</span><strong>$3.00</strong></li>
+              <li><span>Water Bottle</span><strong>$3.00</strong></li>
+            </ul>
+            <p style="margin-top:1rem;color:var(--muted)">Bulk catering and function orders available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="container card">
+        <h2>Order Online</h2>
+        <p>Order your favourites directly for pickup or delivery.</p>
+        <div class="cta">
+          <a class="btn primary" href="#" aria-label="Order with DoorDash">Order on DoorDash</a>
+          <a class="btn secondary" href="#" aria-label="Order with Uber Eats">Order on Uber Eats</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>What Customers Say</h2>
+        <div class="reviews">
+          <article class="card">
+            <div class="star">★★★★★</div>
+            <p>"Excellent food."</p>
+            <small>- Andrew Smith (Google review snippet)</small>
+          </article>
+          <article class="card">
+            <div class="star">★★★★★</div>
+            <p>"Biryani was good for the price."</p>
+            <small>- Imran Ali (Google review snippet)</small>
+          </article>
+          <article class="card">
+            <div class="star">★★★★★</div>
+            <p>"Authentic Hyderabadi flavours and generous portions."</p>
+            <small>- Compiled from public Google review summaries</small>
+          </article>
+        </div>
+        <p style="margin-top:.75rem;color:var(--muted);font-size:.9rem">Review snippets sourced from publicly indexed Google review excerpts for The Birhaa Garden, Fawkner, Victoria.</p>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <div class="container card">
+        <h2>Feedback</h2>
+        <div class="two-col">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Your email" />
+          </div>
+        </div>
+        <div style="margin-top:1rem">
+          <label for="message">Your feedback</label>
+          <textarea id="message" placeholder="Tell us about your experience..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container card">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> 135 Jukes Rd, Fawkner VIC 3060</p>
+        <p><strong>Phone:</strong> 03 9100 3471</p>
+        <p><strong>Hours:</strong> Daily 12:00 PM - 10:00 PM</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 The Birhaa Garden · Feel In Hyderabad</div>
+  </footer>
+</body>
+</html>
